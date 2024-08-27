@@ -249,6 +249,7 @@ html {
   padding: 0.8rem;
   font-size: 2rem;
   margin-top: 2rem;
+  transition: ease 300ms all;
 }
 .btn-continue-empty:hover {
   color: #fff;
@@ -283,6 +284,7 @@ html {
   border-radius: 1rem;
   background-color: rgb(212, 212, 212);
   padding: 0.8rem;
+  transition: ease 300ms all;
 }
 .cart-box .cart .btn-continue:hover {
   color: #fff;
@@ -437,6 +439,18 @@ html {
   text-align: center;
   width: 30rem;
   font-size: 1.5rem;
+}
+
+.delete-container {
+  width: 50rem;
+  height: 30rem;
+  font-size: 1.2rem;
+}
+
+.deleted-container {
+  width: 50rem;
+  height: 30rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,17 +14,18 @@
   }
 }
 
-.btn-continue-empty{
+.btn-continue-empty {
   align-self: center;
-  text-decoration: none;      
-  color: #000000;      
+  text-decoration: none;
+  color: #000000;
   border-radius: 1rem;
   background-color: rgb(212, 212, 212);
   padding: 0.8rem;
   font-size: 2rem;
   margin-top: 2rem;
+  transition: ease 300ms all;
 
-  &:hover{
+  &:hover {
     color: #fff;
     background-color: $color-dark-green;
   }
@@ -50,15 +51,16 @@
       }
     }
 
-    .btn-continue{
+    .btn-continue {
       align-self: center;
-      text-decoration: none;      
-      color: #000000;      
+      text-decoration: none;
+      color: #000000;
       border-radius: 1rem;
       background-color: rgb(212, 212, 212);
       padding: 0.8rem;
+      transition: ease 300ms all;
 
-      &:hover{
+      &:hover {
         color: #fff;
         background-color: $color-dark-green;
       }
@@ -230,4 +232,16 @@
   text-align: center;
   width: 30rem;
   font-size: 1.5rem;
+}
+
+.delete-container {
+  width: 50rem;
+  height: 30rem;
+  font-size: 1.2rem;
+}
+
+.deleted-container {
+  width: 50rem;
+  height: 30rem;
+  font-size: 1.2rem;
 }

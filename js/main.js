@@ -1,66 +1,21 @@
 // Array de productos
-const productsArray = [
-    {
-        id: "Keyboard-1",
-        titulo: "ThunderSwitch Pro",
-        imagen: "./img/teclado.jpg",
-        categoria: {
-            nombre: "100%",
-            id: "t-100%"
-        },
-        precio: 150
-    },
-    {
-        id: "Keyboard-2",
-        titulo: "KeyBlaze Elite",
-        imagen: "./img/teclado2.jpg",
-        categoria: {
-            nombre: "100%",
-            id: "t-100%"
-        },
-        precio: 300
-    },
-    {
-        id: "Keyboard-3",
-        titulo: "MechaCore X",
-        imagen: "./img/teclado3.jpg",
-        categoria: {
-            nombre: "70%",
-            id: "t-70%"
-        },
-        precio: 500
-    },
-    {
-        id: "Keyboard-4",
-        titulo: "AetherBoard Prime",
-        imagen: "./img/teclado4.jpg",
-        categoria: {
-            nombre: "70%",
-            id: "t-70%"
-        },
-        precio: 50
-    },
-    {
-        id: "Keyboard-5",
-        titulo: "TitanKey Ultra",
-        imagen: "./img/teclado5.jpg",
-        categoria: {
-            nombre: "60%",
-            id: "t-60%"
-        },
-        precio: 200
-    },
-    {
-        id: "Keyboard-6",
-        titulo: "EchoStrike Viper",
-        imagen: "./img/teclado6.jpg",
-        categoria: {
-            nombre: "60%",
-            id: "t-60%"
-        },
-        precio: 1000
+let productsArray = [];
+
+// Async Await para traer los productos desde el archivo .json
+const dataFetch = async () => {
+    try {
+        const resp = await fetch("./data/productos.json");
+        const data = await resp.json();
+        productsArray = data;
+
+        loadProducts(productsArray);
+    } catch (error) {
+        console.error("Error fetching products: ", error);
     }
-];
+};
+
+dataFetch();
+
 
 // Selección de elementos del DOM
 const productContainer = document.querySelector("#products-container");
@@ -80,7 +35,7 @@ function loadProducts(products) {
                 <div class="info-product">
                     <h2 class="title-product">${product.titulo}</h2>
                     <p class="price-product">$${product.precio}</p>
-                    <button class="btn-product" id="${product.id}">Add Cart</button>
+                    <button class="btn-product" id="${product.id}">Agregar Carrito</button>
                 </div>
             `;
 
@@ -90,7 +45,6 @@ function loadProducts(products) {
     updateButtonProducts(); // Actualiza los botones "Add Cart"
 }
 
-loadProducts(productsArray); // Se pasa el Array como parámetro para que cargue completo
 
 // Navegación y filtros
 const navButtons = document.querySelectorAll(".boton-nav");
@@ -101,14 +55,14 @@ navButtons.forEach(button => {
         navButtons.forEach(button => button.classList.remove("active"));
         event.currentTarget.classList.add("active");
 
-        if (event.currentTarget.id != "all") {
+        if (event.currentTarget.id != "todo") {
             const filter = productsArray.find(product => product.categoria.id === event.currentTarget.id);
-            mainTitle.innerText = `Keyboards ${filter.categoria.nombre}`;
+            mainTitle.innerText = `Teclados Custom ${filter.categoria.nombre}`;
 
             const productFilter = productsArray.filter(producto => producto.categoria.id === event.currentTarget.id);
             loadProducts(productFilter);
         } else {
-            mainTitle.innerText = "All Keyboards";
+            mainTitle.innerText = "Teclados Custom";
             loadProducts(productsArray);
         }
     });

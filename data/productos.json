@@ -1,0 +1,62 @@
+[
+    {
+        "id": "Keyboard-1",
+        "titulo": "ThunderSwitch Pro",
+        "imagen": "./img/teclado.jpg",
+        "categoria": {
+            "nombre": "100%",
+            "id": "t-100%"
+        },
+        "precio": 150
+    },
+    {
+        "id": "Keyboard-2",
+        "titulo": "KeyBlaze Elite",
+        "imagen": "./img/teclado2.jpg",
+        "categoria": {
+            "nombre": "100%",
+            "id": "t-100%"
+        },
+        "precio": 300
+    },
+    {
+        "id": "Keyboard-3",
+        "titulo": "MechaCore X",
+        "imagen": "./img/teclado3.jpg",
+        "categoria": {
+            "nombre": "70%",
+            "id": "t-70%"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Keyboard-4",
+        "titulo": "AetherBoard Prime",
+        "imagen": "./img/teclado4.jpg",
+        "categoria": {
+            "nombre": "70%",
+            "id": "t-70%"
+        },
+        "precio": 80
+    },
+    {
+        "id": "Keyboard-5",
+        "titulo": "TitanKey Ultra",
+        "imagen": "./img/teclado5.jpg",
+        "categoria": {
+            "nombre": "60%",
+            "id": "t-60%"
+        },
+        "precio": 200
+    },
+    {
+        "id": "Keyboard-6",
+        "titulo": "EchoStrike Viper",
+        "imagen": "./img/teclado6.jpg",
+        "categoria": {
+            "nombre": "60%",
+            "id": "t-60%"
+        },
+        "precio": 1000
+    }
+]

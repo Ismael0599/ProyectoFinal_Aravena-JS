@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreEntrega3_Aravena | Cart</title>
+    <title>ProyectoFinal_Aravena | Carro</title>
 
     <!-- Icono pestaña de la página -->
     <link rel="shortcut icon" href="../img/logo_clicky.png" type="image/x-icon" />
@@ -15,9 +15,6 @@
     <!-- Link iconos Bootstrap -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-
-    <!-- Link CSS Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -28,7 +25,7 @@
                 <a href="../index.html"><img src="../img/logo_clicky.png" alt="Logo de la página" class="logo"></a>
 
                 <div class="cart-container">
-                    <a href="./cart.html" class="boton-carrito" title="Cart">
+                    <a href="./cart.html" class="boton-carrito" title="Carrito">
                         <i class="bi bi-basket3-fill"></i><span class="numero-carrito">0</span>
                     </a>
                 </div>
@@ -37,18 +34,20 @@
 
         <main>
             <p class="empty-cart" id="empty-cart"><i class="bi bi-basket3"></i>Tu carrito está vacío</p>
-            <a href="../index.html" class="btn-continue-empty"><i class="bi bi-arrow-return-left"></i> Seguir Comprando</a>
+            <a href="../index.html" class="btn-continue-empty"><i class="bi bi-arrow-return-left"></i> Seguir
+                Comprando</a>
             <div class="cart-box" id="cart-box">
                 <div class="cart">
                     <h2>Carro <span class="cart-num">(0 productos)</span></h2>
-                    <a href="../index.html" class="btn-continue"><i class="bi bi-arrow-return-left"></i> Seguir Comprando</a>
+                    <a href="../index.html" class="btn-continue"><i class="bi bi-arrow-return-left"></i> Seguir
+                        Comprando</a>
                     <div class="cart-item-container">
                         <!-- Los productos se agregarán aquí por JavaScript -->
                     </div>
                 </div>
                 <!-- Aquí solo deja el contenedor para los productos y el resumen -->
             </div>
-            
+
         </main>
 
 
@@ -58,8 +57,8 @@
         </footer>
     </div>
 
-    <!-- Link JS Toastify -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Link JS Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Link's JS -->
     <script src="../js/cart.js"></script>
