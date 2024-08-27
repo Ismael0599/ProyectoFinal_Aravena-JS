@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreEntrega3_Aravena | Productos</title>
+
+    <!-- Icono pestaña de la página -->
+    <link rel="shortcut icon" href="./img/logo_clicky.png" type="image/x-icon" />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Link inconos Bootstrap -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+    <!-- Link CSS Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+    <div class="body-container">
+        <header>
+            <section class="header-container">
+                <a href="./index.html"><img src="./img/logo_clicky.png" alt="Logo de la pagina" class="logo"></a>
+                <nav class="navegation-container">
+                    <ul>
+                        <li><button id="all" class="boton-nav active" aria-label="Mostrar todo">All</button></li>
+                        <li><button id="t-100%" class="boton-nav" aria-label="Mostrar 100%">100%</button></li>
+                        <li><button id="t-70%" class="boton-nav" aria-label="Mostrar 70%">70%</button></li>
+                        <li><button id="t-60%" class="boton-nav" aria-label="Mostrar 60%">60%</button></li>
+                    </ul>
+                </nav>
+                <div class="cart-container">
+                    <a href="./pages/cart.html" class="boton-carrito" title="Cart">
+                        <i class="bi bi-basket3-fill"></i><span class="numero-carrito">0</span>
+                    </a>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <h1 class="main-title">All Keyboards</h1>
+            <div class="products-container" id="products-container">
+                <!-- Productos cargados por JS -->
+            </div>
+        </main>
+
+        <footer>
+            <small>© TODOS LOS DERECHOS RESERVADOS</small>
+            <P>clicky.com Jardín Alto 7700, Vitacura</P>
+        </footer>
+    </div>
+
+
+    <!-- Link JS Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Link's JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

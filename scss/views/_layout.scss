@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* HEADER - MAIN - FOOTER */
+.body-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  width: 100%;
+
+  header {
+    .header-container {
+      @include flex(flex, row, space-around, center);
+      width: 100%;
+      padding: 3rem 0;
+      background-color: $color-fondo-general;
+
+      a {
+        @include flex(flex, row, center, center);
+        text-decoration: none;
+
+        .logo {
+          width: 20rem;
+          height: 8rem;
+          cursor: pointer;
+          transition: ease 300ms all;
+
+          &:hover {
+            transform: scale(1.4);
+          }
+        }
+      }
+
+      .navegation-container {
+        @include flex(flex, row, center, center);        
+
+        ul {
+          @include flex(flex, row, center, center);
+          list-style: none;
+          gap: 2rem;
+
+          li {
+            .boton-nav {
+              background: none;
+              border: none;
+              font-family: "Courier New", Courier, monospace;
+              font-size: 2rem;
+              font-weight: 600;
+              cursor: pointer;
+              position: relative;
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -3px;
+                width: 50%;
+                height: 2px;
+                background-color: black;
+                transform: translateX(-50%) scaleY(0);
+                transition: trasform 0.3s;
+              }
+
+              &:hover::after,
+              &.active::after {
+                transform: translateX(-50%) scaleY(1);
+              }
+            }
+          }
+        }
+      }
+
+      .cart-container {
+        @include flex(flex, row, center, center);
+        padding: 2rem;
+        width: 20rem;
+
+        a {
+          @include flex(inline-flex, row, center, center);
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+          position: relative;
+          cursor: pointer;
+          padding: 1rem;
+          transition: ease 300ms all;
+
+          i {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+          }
+          .numero-carrito {
+            position: absolute;
+            @include flex(flex, row, center, center);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $color-dark-green;
+            color: #fff;
+            top: -5%;
+            left: 60%;
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+          }
+
+          &:hover {
+            transform: scale(1.4);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    @include flex(flex, column, flex-start, center);    
+    background-color: $color-fondo-main;
+
+    .main-title {
+      font-family: "Courier New", Courier, monospace;
+      padding: 0 2rem;
+      font-size: 4rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    .products-container {
+      @include grid(3, 2rem);
+      padding: 0 15rem;
+      margin-bottom: 2rem;
+
+      .product {
+        @include flex(flex, column, center, center);
+        border: 1px solid rgb(209, 209, 209);
+        border-radius: 1rem;
+        width: 30rem;
+        position: relative;
+        background-color: #fff;
+
+        .img-product {
+          width: 100%;
+          height: 25rem;
+          border-radius: 1rem 1rem 0 0;
+        }
+
+        span {
+          @include flex(flex, row, center, center);
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          background-color: $color-dark-green;
+          font-size: 1.3rem;
+          color: #fff;
+          position: absolute;
+          top: 2%;
+          right: 2%;
+        }
+
+        .info-product {
+          @include flex(flex, column, center, center);
+          margin-top: 1rem;
+
+          .title-product {
+            font-family: cursive;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+          }
+
+          .price-product {
+            font-family: cursive;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+
+          .btn-product {
+            border: 1px solid rgb(173, 173, 173);
+            border-radius: 1rem;
+            width: 20rem;
+            height: 4rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            color: black;
+            transition: ease 300ms all;
+
+            &:hover {
+              background-color: $color-dark-green;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include grid(1, 1rem);    
+    background-color: $color-fondo-footer;
+    padding: 2rem 10rem; 
+    font-size: 1.5rem;
+    color: #fff;
+    justify-items: start;
+
+    p{
+      font-size: 1.1rem;
+    }
+
+  }
+}

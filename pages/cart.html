@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreEntrega3_Aravena | Cart</title>
+
+    <!-- Icono pestaña de la página -->
+    <link rel="shortcut icon" href="../img/logo_clicky.png" type="image/x-icon" />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Link iconos Bootstrap -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+    <!-- Link CSS Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <div class="body-container">
+
+        <header>
+            <section class="header-container">
+                <a href="../index.html"><img src="../img/logo_clicky.png" alt="Logo de la página" class="logo"></a>
+
+                <div class="cart-container">
+                    <a href="./cart.html" class="boton-carrito" title="Cart">
+                        <i class="bi bi-basket3-fill"></i><span class="numero-carrito">0</span>
+                    </a>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <p class="empty-cart" id="empty-cart"><i class="bi bi-basket3"></i>Tu carrito está vacío</p>
+            <a href="../index.html" class="btn-continue-empty"><i class="bi bi-arrow-return-left"></i> Seguir Comprando</a>
+            <div class="cart-box" id="cart-box">
+                <div class="cart">
+                    <h2>Carro <span class="cart-num">(0 productos)</span></h2>
+                    <a href="../index.html" class="btn-continue"><i class="bi bi-arrow-return-left"></i> Seguir Comprando</a>
+                    <div class="cart-item-container">
+                        <!-- Los productos se agregarán aquí por JavaScript -->
+                    </div>
+                </div>
+                <!-- Aquí solo deja el contenedor para los productos y el resumen -->
+            </div>
+            
+        </main>
+
+
+        <footer>
+            <small>© TODOS LOS DERECHOS RESERVADOS</small>
+            <p>clicky.com Jardín Alto 7700, Vitacura</p>
+        </footer>
+    </div>
+
+    <!-- Link JS Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Link's JS -->
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
